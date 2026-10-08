@@ -580,33 +580,51 @@ body.home #categories .eg-category-showcase__text {
 }
 
 /* ==========================================================================
-   Section 6: Deals (#deals)
+   Section 6: Deals (#deals) - Naya Brand Tokens & Presentation
    ========================================================================== */
 body.home #deals {
+	--eg-deals-bg: linear-gradient(135deg, #4b1a5a 0%, #102136 100%);
+	--eg-deals-color: #ffffff;
+	--eg-deals-accent: #9f3ebd;
+	--eg-deals-glow: radial-gradient(circle, rgba(159, 62, 189, 0.25) 0%, rgba(102, 41, 121, 0) 70%);
+
+	--eg-deals-eyebrow-bg: rgba(255, 255, 255, 0.15);
+	--eg-deals-eyebrow-border: rgba(255, 255, 255, 0.25);
+	--eg-deals-eyebrow-color: #fce7fe;
+
+	--eg-deals-title-color: #ffffff;
+	--eg-deals-subtitle-color: #cbd5e1;
+
+	--eg-deals-timer-bg: rgba(255, 255, 255, 0.1);
+	--eg-deals-timer-border: rgba(255, 255, 255, 0.15);
+	--eg-deals-timer-color: #ffffff;
+	--eg-deals-timer-label: #cbd5e1;
+	--eg-deals-timer-colon: #ffffff;
+
+	--eg-deals-action-bg: #9f3ebd;
+	--eg-deals-action-color: #ffffff;
+	--eg-deals-action-shadow: 0 4px 16px rgba(159, 62, 189, 0.35);
+
+	--eg-deals-card-bg: rgba(255, 255, 255, 0.08);
+	--eg-deals-card-border: rgba(255, 255, 255, 0.14);
+	--eg-deals-card-hover-bg: rgba(255, 255, 255, 0.12);
+	--eg-deals-card-hover-border: rgba(255, 255, 255, 0.25);
+	--eg-deals-card-color: #ffffff;
+
+	--eg-deals-badge-bg: #9f3ebd;
+	--eg-deals-badge-color: #ffffff;
+	--eg-deals-stock-color: #cbd5e1;
+
+	--eg-deals-cart-btn-bg: #662979;
+	--eg-deals-cart-btn-color: #ffffff;
+
 	padding: 80px 0;
-	background: linear-gradient(135deg, #4b1a5a 0%, #102136 100%);
-	color: #ffffff;
 }
 
 body.home #deals .eg-product-collection__eyebrow {
-	color: #fce7fe;
-	background-color: rgba(255, 255, 255, 0.15);
-	border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-body.home #deals .eg-product-collection__heading h2 {
-	color: #ffffff;
-}
-
-body.home #deals .eg-product-collection__heading p {
-	color: #cbd5e1;
-}
-
-body.home #deals .eg-product-collection__action {
-	border-color: transparent;
-	color: #ffffff;
-	background-color: #9f3ebd;
-	border-radius: 9999px;
+	color: var(--eg-deals-eyebrow-color);
+	background-color: var(--eg-deals-eyebrow-bg);
+	border: 1px solid var(--eg-deals-eyebrow-border);
 }
 
 /* ==========================================================================

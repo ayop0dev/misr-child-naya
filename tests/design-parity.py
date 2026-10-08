@@ -50,9 +50,9 @@ SECTIONS: list[tuple[str, str, str]] = [
 MEASURED: list[tuple[str, str, str]] = [
     ('eyebrow', '.section-tag, .hero-badge-pill', '[class$="__eyebrow"], .eg-hero__eyebrow'),
     ('title', '.section-title, .hero-title', 'h2, h1'),
-    ('subtitle', '.section-subtitle, .hero-description', '[class$="__heading"] p, .eg-hero__description, .section-subtitle'),
-    ('button', '.btn', '.eg-hero__action, [class$="__action"], [class$="__toggle"], .btn-terracotta, .deal-header .btn'),
-    ('card', '.category-card, .pillar-card, .product-card, .deal-product-card', '.eg-category-showcase__card, .eg-features__item, .eg-product-card, .deal-product-card'),
+    ('subtitle', '.section-subtitle, .hero-description', '[class$="__heading"] p, .eg-hero__description, .section-subtitle, .eg-product-collection__description'),
+    ('button', '.btn', '.eg-hero__action, [class$="__action"], [class$="__toggle"], .btn-terracotta, .deal-header .btn, .eg-product-collection__deals-action'),
+    ('card', '.category-card, .pillar-card, .product-card, .deal-product-card', '.eg-category-showcase__card, .eg-features__item, .eg-product-card, .deal-product-card, .eg-product-collection__deals-card'),
 ]
 
 PROPS = ['fontSize', 'fontWeight', 'lineHeight', 'color', 'backgroundColor', 'borderRadius',
