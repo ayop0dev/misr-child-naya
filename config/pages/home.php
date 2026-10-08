@@ -38,8 +38,9 @@ return [
 			'title_highlight'        => 'للبشرة، الشعر والجسم',
 			'description'            => 'نجمع بين أنقى الخلاصات النباتية العضوية وأحدث ابتكارات طب الجلدية السريرية. خالٍ تماماً من البارابين، العطور الاصطناعية، والسيليكون لتمنحي نفسك عناية نقية تستحقينها في مصر من نايا.',
 			'mobile_align'           => 'center',
-			// Media library attachment ID of the hero photo (set on the store).
-			'image'                  => 0,
+			// Shipped with the theme (assets/images/hero.webp, 960×1200, the
+			// design's photo), so it is the same locally and on the store.
+			'image'                  => get_stylesheet_directory_uri() . '/assets/images/hero.webp',
 			'action_label'           => 'تسوقي كافة الأقسام',
 			'action_url'             => $shopUrl,
 			'secondary_action_label' => 'العروض',
