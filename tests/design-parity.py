@@ -143,6 +143,8 @@ def main() -> int:
     out.mkdir(parents=True, exist_ok=True)
     report: dict = {}
 
+    cookies_data = json.loads(pathlib.Path(args.cookies).resolve().read_text(encoding='utf-8')) if args.cookies else None
+
     with sync_playwright() as p:
         browser = p.chromium.launch(channel='chrome')
         for width in (int(w) for w in args.widths.split(',')):
@@ -152,11 +154,10 @@ def main() -> int:
             demo.goto(DEMO.as_uri(), wait_until='networkidle')
 
             impl_ctx = browser.new_context(viewport={'width': width, 'height': 900}, is_mobile=mobile and args.impl != 'customizer', has_touch=mobile)
-            if args.cookies:
-                ck = json.loads(pathlib.Path(args.cookies).read_text(encoding='utf-8'))
+            if cookies_data:
                 impl_ctx.add_cookies([
-                    {'name': ck['auth'][0], 'value': ck['auth'][1], 'domain': 'egystore.test', 'path': '/wp-admin'},
-                    {'name': ck['logged'][0], 'value': ck['logged'][1], 'domain': 'egystore.test', 'path': '/'},
+                    {'name': cookies_data['auth'][0], 'value': cookies_data['auth'][1], 'domain': 'egystore.test', 'path': '/wp-admin'},
+                    {'name': cookies_data['logged'][0], 'value': cookies_data['logged'][1], 'domain': 'egystore.test', 'path': '/'},
                 ])
             impl = open_impl(impl_ctx, args.impl, width)
 
