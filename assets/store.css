@@ -199,6 +199,13 @@ body.home #hero .eg-hero__eyebrow {
 	gap: 0.5rem;
 }
 
+body.home #hero .eg-hero__eyebrow-icon {
+	inline-size: 1rem;
+	block-size: 1rem;
+	flex-shrink: 0;
+	color: #662979;
+}
+
 body.home #hero .eg-hero__title {
 	font-size: 60.1px;
 	font-weight: 700;
@@ -306,7 +313,8 @@ body.home #hero .eg-hero__stats {
 	align-items: center;
 	gap: 2rem;
 	padding-block-start: 1.5rem;
-	border-block-start: 1px solid rgba(16, 33, 54, 0.08);
+	border-block-start: 1px solid rgba(16, 33, 54, 0.16);
+	inline-size: 100%;
 	margin: 0;
 }
 
