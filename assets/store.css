@@ -1,0 +1,15 @@
+/*
+ * Naya brand layer.
+ *
+ * Only brand-specific touches; structure comes from the Egstore theme, and
+ * the store-wide colours (primary #662979, hover #9f3ebd, headings #102136,
+ * text #4d5d6d, borders #e7ebee, surfaces #f3f5f7, page #fbfbfc, inverse
+ * #ffffff) are Customizer settings set on first activation
+ * (inc/import-settings.php).
+ */
+
+/* Secondary orchid for offers: discount badges on product cards. */
+.eg-product-card__badge,
+.eg-product-card--h3 .eg-product-card__discount {
+	background: #9f3ebd;
+}

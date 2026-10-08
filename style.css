@@ -1,0 +1,14 @@
+/*
+Theme Name: Misr Child
+Description: Store layer for نايا للجمال النقي (naya.dokanelbanat.com) on top of the Egstore theme (built for Egstore 1.3.3): homepage composition, copy and brand styling only.
+Theme URI: https://github.com/ayop0dev/misr-child-naya
+Template: Egstore-theme
+Version: 0.1.0
+Requires at least: 6.6
+Requires PHP: 8.1
+Text Domain: misr-child-naya
+Update URI: https://updates.dokanelbanat.com/misr-child-naya
+Egstore Update Key: EUWO0Zmds383kWTAQCZr56Wm1zAG/3LMj+LTPdxvfY8=
+*/
+
+/* Styles live in assets/store.css (enqueued by functions.php). */
