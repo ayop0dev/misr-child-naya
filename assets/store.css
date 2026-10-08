@@ -5,11 +5,108 @@
  * the store-wide colours (primary #662979, hover #9f3ebd, headings #102136,
  * text #4d5d6d, borders #e7ebee, surfaces #f3f5f7, page #fbfbfc, inverse
  * #ffffff) are Customizer settings set on first activation
- * (inc/import-settings.php).
+ * (inc/import-settings.php). Product cards stay the theme's.
  */
 
 /* Secondary orchid for offers: discount badges on product cards. */
 .eg-product-card__badge,
 .eg-product-card--h3 .eg-product-card__discount {
 	background: #9f3ebd;
+}
+
+/* Rounded shapes (sections only, not product cards): capsule buttons,
+   eyebrows and badges, soft cards. */
+body.home {
+	--naya-radius-card: 1.25rem;
+	--naya-radius-large: 2rem;
+	--eg-hero-figure-radius: var(--naya-radius-large);
+	--eg-hero-badge-radius: 1rem;
+}
+
+body.home .eg-hero__search,
+body.home .eg-hero__action,
+body.home .eg-hero__search-button,
+body.home .eg-product-collection__action,
+body.home .eg-category-showcase__toggle {
+	border-radius: 999px;
+}
+
+/* Hero: a soft lavender wash behind the content. */
+body.home .eg-hero {
+	--eg-hero-bg: linear-gradient(160deg, #f6eefa 0%, #fbfbfc 55%, #f3f5f7 100%);
+	--eg-hero-min-height: auto;
+}
+
+body.home .eg-hero__title {
+	font-size: clamp(2rem, 4.6vw, 3.5rem);
+	line-height: 1.25;
+}
+
+body.home .eg-hero__action--secondary {
+	border-color: color-mix(in oklch, #662979 35%, transparent);
+	background: #ffffff;
+}
+
+body.home .eg-hero__stat-value {
+	color: var(--eg-color-ink);
+}
+
+/* Features band: white, between hairlines, icons in lavender tiles. */
+body.home .eg-features {
+	--eg-features-bg: #ffffff;
+	--eg-features-icon-bg: #f4ecf8;
+	border-block: 1px solid var(--eg-color-border);
+}
+
+body.home .eg-features__icon {
+	border-radius: 0.875rem;
+}
+
+/* Categories: white cards. */
+body.home .eg-category-showcase--circle .eg-category-showcase__card {
+	border-radius: var(--naya-radius-card);
+	background: #ffffff;
+	transition: box-shadow var(--eg-duration-fast) var(--eg-ease-standard, ease), transform var(--eg-duration-fast) var(--eg-ease-standard, ease);
+}
+
+body.home .eg-category-showcase--circle .eg-category-showcase__card:hover {
+	box-shadow: 0 0.75rem 1.75rem color-mix(in oklch, #662979 12%, transparent);
+	transform: translateY(-2px);
+}
+
+body.home .eg-category-showcase--circle .eg-category-showcase__media {
+	background: #f4ecf8;
+}
+
+/* Deals: a deep violet band. */
+body.home #deals {
+	--eg-section-eyebrow-bg: color-mix(in oklch, #ffffff 14%, transparent);
+	--eg-section-eyebrow-text: #ffffff;
+	color: #ffffff;
+	background: linear-gradient(135deg, #2b0f37 0%, #4a1d5c 55%, #102136 100%);
+}
+
+body.home #deals .eg-product-collection__heading h2 {
+	color: #ffffff;
+}
+
+body.home #deals .eg-product-collection__heading p {
+	color: color-mix(in oklch, #ffffff 78%, transparent);
+}
+
+body.home #deals .eg-product-collection__action {
+	border-color: transparent;
+	color: #ffffff;
+	background: #9f3ebd;
+}
+
+body.home #deals .eg-product-collection__action:hover {
+	background: #b052cf;
+}
+
+/* Alternate light backgrounds between product sections. */
+body.home #new-arrivals,
+body.home #bodycare,
+body.home #bestsellers {
+	background: #f3f5f7;
 }

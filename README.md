@@ -2,7 +2,7 @@
 
 This theme holds only what is specific to Naya (naya.dokanelbanat.com).
 Everything else comes from the Egstore theme and the egstore-commerce plugin,
-which update without touching this folder. Built for Egstore theme 1.3.3 and
+which update without touching this folder. Built for Egstore theme 1.3.4 and
 egstore-commerce 1.3.3.
 
 It shows as "Misr Child" in the dashboard; its folder and update slug are
@@ -52,7 +52,7 @@ The design promises things only the store can confirm. Until then:
 ## Updates and releases
 
 Updates come from WordPress → Updates through the Egstore update gateway
-(needs egstore-commerce 1.3.1 or newer and Egstore theme 1.3.3 or newer).
+(needs egstore-commerce 1.3.1 or newer and Egstore theme 1.3.4 or newer).
 `style.css` declares `Update URI` and `Egstore Update Key`, the Ed25519
 public key in `release-config.json`.
 

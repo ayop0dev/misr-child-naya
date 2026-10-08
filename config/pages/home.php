@@ -7,10 +7,11 @@
  * (from the design in Egstore-theme/demo-home). Category cards use each
  * category's own thumbnail and link.
  *
- * Sections of the design the theme cannot render yet (flash deals with a
- * countdown, routine finder, shop by concern, bundle builder, clinical
- * proof, ingredients, reviews, UGC, blog, FAQ, newsletter) are added here as
- * the theme gains them; see README.md.
+ * The hero's figures and badges are the design's claims; the store confirms
+ * them before going live (README.md). Sections of the design the theme cannot
+ * render yet (flash deals countdown, routine finder, shop by concern, bundle
+ * builder, clinical proof, ingredients, reviews, UGC, blog, FAQ, newsletter)
+ * are added as the theme gains them.
  *
  * @package MisrChildNaya
  */
@@ -30,22 +31,36 @@ return [
 	[
 		'section' => 'hero',
 		'config'  => [
-			'eyebrow'             => 'نايا للجمال النقي',
-			'title'               => 'علم الطبيعة لجمال يدوم',
-			'description'         => 'نجمع بين أنقى الخلاصات النباتية العضوية وأحدث ابتكارات طب الجلدية السريرية. خالٍ تماماً من البارابين، العطور الاصطناعية، والسيليكون لتمنحي نفسك عناية نقية تستحقينها.',
-			'mobile_align'        => 'center',
-			'search'              => true,
-			'search_placeholder'  => 'ابحثي عن منتج أو مكون...',
-			'search_button_label' => 'بحث',
-			'action_label'        => 'تسوقي كافة الأقسام',
-			'action_url'          => $shopUrl,
+			'layout'                 => 'split',
+			'eyebrow'                => 'تركيبات طبيعية لخلايا تتنفس',
+			'eyebrow_style'          => 'pill',
+			'title'                  => 'علم الطبيعة لجمال يدوم: روتينك الشامل',
+			'title_highlight'        => 'للبشرة، الشعر والجسم',
+			'description'            => 'نجمع بين أنقى الخلاصات النباتية العضوية وأحدث ابتكارات طب الجلدية السريرية. خالٍ تماماً من البارابين، العطور الاصطناعية، والسيليكون لتمنحي نفسك عناية نقية تستحقينها.',
+			'mobile_align'           => 'center',
+			// Media library attachment ID of the hero photo (set on the store).
+			'image'                  => 0,
+			'action_label'           => 'تسوقي كافة الأقسام',
+			'action_url'             => $shopUrl,
+			'secondary_action_label' => 'العروض',
+			'secondary_action_url'   => $categoryUrl('offers'),
+			'stats'                  => [
+				['value' => '98%', 'label' => 'مكونات طبيعية ونقية'],
+				['value' => '+65,000', 'label' => 'عميلة راضية في محافظات مصر'],
+				['value' => '4.9 / 5', 'label' => 'تقييم العميلات'],
+			],
+			'badges'                 => [
+				['icon' => 'zap', 'title' => 'نضارة تدوم 72 ساعة', 'text' => 'حمض الهيالورونيك + النياسيناميد'],
+				['icon' => 'shield-check', 'title' => 'تركيبات آمنة', 'text' => 'خالية من البارابين والسيليكون'],
+			],
 		],
 	],
 	[
 		'section' => 'features',
 		'config'  => [
-			'id'    => 'pillars',
-			'items' => [
+			'id'     => 'pillars',
+			'layout' => 'inline',
+			'items'  => [
 				['icon' => 'truck', 'title' => 'شحن سريع ومبرد', 'text' => 'القاهرة والجيزة والإسكندرية خلال 24-48 ساعة، وخلال 3 أيام لباقي المحافظات.'],
 				['icon' => 'shield-check', 'title' => 'ضمان الرضا 30 يوماً', 'text' => 'استرجاع أو استبدال إن لم تلحظي نتيجة إيجابية في بشرتك أو شعرك.'],
 				['icon' => 'message-circle', 'title' => 'استشارة مجانية', 'text' => 'تحدثي معنا عبر واتساب لبناء روتينك الأمثل.'],
@@ -56,11 +71,15 @@ return [
 	[
 		'section' => 'category-showcase',
 		'config'  => [
-			'id'          => 'categories',
-			'title'       => 'استكشفي حسب عالم العناية',
-			'description' => 'تشكيلة شاملة مدروسة بعناية لتلبي جميع احتياجات روتينك اليومي.',
-			'layout'      => 'grid',
-			'categories'  => [
+			'id'            => 'categories',
+			'eyebrow'       => 'أقسام المتجر',
+			'heading_align' => 'center',
+			'title'         => 'استكشفي حسب عالم العناية',
+			'description'   => 'تشكيلة شاملة مدروسة بعناية لتلبي جميع احتياجات روتينك اليومي.',
+			'layout'        => 'grid',
+			'card_style'    => 'circle',
+			'show_count'    => true,
+			'categories'    => [
 				'العناية-بالوجه',
 				'العناية-بالجسم',
 				'العناية-بالشعر',
@@ -73,73 +92,85 @@ return [
 	[
 		'section' => 'product-collection',
 		'config'  => [
-			'id'           => 'new-arrivals',
-			'title'        => 'أحدث ابتكارات العناية والجمال من نايا',
-			'description'  => 'تركيبات مطورة حديثاً بأعلى تركيزات الفعالية لتمنحك نتائج ملموسة.',
-			'action_label' => 'عرض الكل',
-			'action_url'   => $shopUrl,
-			'show_rating'  => true,
-			'source'       => ['type' => 'latest', 'limit' => 8],
+			'id'            => 'deals',
+			'eyebrow'       => 'عروض محدودة الكمية',
+			'heading_align' => 'center',
+			'title'         => 'تخفيضات الدفعة الحصرية: خصومات تصل إلى 40%',
+			'description'   => 'دفعات طازجة تم إنتاجها حديثاً لضمان أقصى نشاط حيوي للمكونات. ينتهي العرض عند نفاد الكمية المخصصة.',
+			'action_label'  => 'تسوقي العروض المتاحة',
+			'action_url'    => $categoryUrl('offers'),
+			'layout'        => 'carousel',
+			'show_rating'   => true,
+			'source'        => ['type' => 'on-sale', 'limit' => 8],
 		],
 	],
 	[
 		'section' => 'product-collection',
 		'config'  => [
-			'id'           => 'deals',
-			'title'        => 'تخفيضات الدفعة الحصرية: خصومات تصل إلى 40%',
-			'description'  => 'دفعات طازجة تم إنتاجها حديثاً لضمان أقصى نشاط حيوي للمكونات. ينتهي العرض عند نفاد الكمية المخصصة.',
-			'action_label' => 'عرض الكل',
-			'action_url'   => $categoryUrl('offers'),
-			'show_rating'  => true,
-			'source'       => ['type' => 'on-sale', 'limit' => 8],
+			'id'            => 'new-arrivals',
+			'eyebrow'       => 'وصل حديثاً',
+			'heading_align' => 'center',
+			'title'         => 'أحدث ابتكارات العناية والجمال من نايا',
+			'description'   => 'تركيبات مطورة حديثاً بأعلى تركيزات الفعالية لتمنحك نتائج ملموسة.',
+			'layout'        => 'carousel',
+			'show_rating'   => true,
+			'source'        => ['type' => 'latest', 'limit' => 8],
 		],
 	],
 	[
 		'section' => 'product-collection',
 		'config'  => [
-			'id'           => 'skincare',
-			'title'        => 'عالم العناية بالبشرة من نايا',
-			'description'  => 'مستحضرات عالية النقاء للبهتان والتصبغات والخطوط التعبيرية والحاجز المتضرر.',
-			'action_label' => 'عرض الكل',
-			'action_url'   => $categoryUrl('العناية-بالوجه'),
-			'show_rating'  => true,
-			'source'       => ['type' => 'latest', 'limit' => 8, 'category' => 'العناية-بالوجه'],
+			'id'            => 'skincare',
+			'eyebrow'       => 'عناية الوجه والرقبة',
+			'heading_align' => 'center',
+			'title'         => 'عالم العناية بالبشرة من نايا',
+			'description'   => 'مستحضرات عالية النقاء للبهتان والتصبغات والخطوط التعبيرية والحاجز المتضرر.',
+			'action_label'  => 'عرض الكل',
+			'action_url'    => $categoryUrl('العناية-بالوجه'),
+			'show_rating'   => true,
+			'source'        => ['type' => 'latest', 'limit' => 8, 'category' => 'العناية-بالوجه'],
 		],
 	],
 	[
 		'section' => 'product-collection',
 		'config'  => [
-			'id'           => 'bodycare',
-			'title'        => 'طقوس العناية والترطيب العميق للجسم',
-			'description'  => 'صقل الجلد وتفتيح المناطق الجافة بتركيبات غنية بزبدة الشيا والقهوة.',
-			'action_label' => 'عرض الكل',
-			'action_url'   => $categoryUrl('العناية-بالجسم'),
-			'show_rating'  => true,
-			'source'       => ['type' => 'latest', 'limit' => 8, 'category' => 'العناية-بالجسم'],
+			'id'            => 'bodycare',
+			'eyebrow'       => 'طقوس السبا',
+			'heading_align' => 'center',
+			'title'         => 'طقوس العناية والترطيب العميق للجسم',
+			'description'   => 'صقل الجلد وتفتيح المناطق الجافة بتركيبات غنية بزبدة الشيا والقهوة.',
+			'action_label'  => 'عرض الكل',
+			'action_url'    => $categoryUrl('العناية-بالجسم'),
+			'layout'        => 'carousel',
+			'show_rating'   => true,
+			'source'        => ['type' => 'latest', 'limit' => 8, 'category' => 'العناية-بالجسم'],
 		],
 	],
 	[
 		'section' => 'product-collection',
 		'config'  => [
-			'id'           => 'bundles',
-			'title'        => 'بكجات نايا المتكاملة (وفري حتى 35%)',
-			'description'  => 'روتينات مصممة لتعمل بتناغم تام، مضاعفة النتائج وموفرة لوقتك ولميزانيتك.',
-			'action_label' => 'عرض الكل',
-			'action_url'   => $categoryUrl('kits'),
-			'show_rating'  => true,
-			'source'       => ['type' => 'latest', 'limit' => 8, 'category' => 'kits'],
+			'id'            => 'bundles',
+			'eyebrow'       => 'بكجات التوفير',
+			'heading_align' => 'center',
+			'title'         => 'بكجات نايا المتكاملة (وفري حتى 35%)',
+			'description'   => 'روتينات مصممة لتعمل بتناغم تام، مضاعفة النتائج وموفرة لوقتك ولميزانيتك.',
+			'action_label'  => 'عرض الكل',
+			'action_url'    => $categoryUrl('kits'),
+			'show_rating'   => true,
+			'source'        => ['type' => 'latest', 'limit' => 8, 'category' => 'kits'],
 		],
 	],
 	[
 		'section' => 'product-collection',
 		'config'  => [
-			'id'           => 'bestsellers',
-			'title'        => 'مختارات نايا الأكثر مبيعاً',
-			'description'  => 'المنتجات اللي غيرت روتين آلاف العميلات وحصلت على أعلى التقييمات.',
-			'action_label' => 'عرض الكل',
-			'action_url'   => $shopUrl,
-			'show_rating'  => true,
-			'source'       => ['type' => 'best-selling', 'limit' => 8],
+			'id'            => 'bestsellers',
+			'eyebrow'       => 'الأعلى تقييماً وطلباً',
+			'heading_align' => 'center',
+			'title'         => 'مختارات نايا الأكثر مبيعاً',
+			'description'   => 'المنتجات اللي غيرت روتين آلاف العميلات وحصلت على أعلى التقييمات.',
+			'layout'        => 'carousel',
+			'show_rating'   => true,
+			'source'        => ['type' => 'best-selling', 'limit' => 8],
 		],
 	],
 ];
