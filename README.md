@@ -43,9 +43,11 @@ The design promises things only the store can confirm. Until then:
 
 | Design section | State |
 |---|---|
-| Hero, features (pillars), categories | Theme sections |
-| New arrivals, skincare, body care, bundles (kits), best sellers, deals (on sale) | `product-collection` (grid) |
-| Carousels (new arrivals, hair care) | Need a carousel layout in the theme |
+| Hero (split, highlight, two actions, figures, badges), features (inline), categories (circle, counts) | Theme sections (Egstore 1.3.4 options) |
+| Deals (on sale, violet band), new arrivals, body care, best sellers | `product-collection`, carousel |
+| Skin care, bundles (kits) | `product-collection`, grid |
+| Centred headings with an eyebrow | `heading_align: center`, `eyebrow` |
+| Hair care | Its category is empty for now |
 | Under 200 ج.م | Needs a price filter in the plugin's collections |
 | Flash deals countdown and stock bar, routine finder, shop by concern tabs, bestseller tabs, bundle builder, clinical proof, ingredients, reviews, UGC, blog, FAQ, newsletter | New theme capabilities, one at a time |
 
