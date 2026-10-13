@@ -150,6 +150,8 @@ body.home .eg-product-collection__heading p {
    Section 3: Hero (#hero)
    ========================================================================== */
 body.home #hero {
+	--eg-hero-stats-border: rgba(16, 33, 54, 0.08);
+
 	min-block-size: auto;
 	padding: 56px 0 72px;
 	background: radial-gradient(circle at 10% 20%, rgba(159, 62, 189, 0.07) 0%, transparent 40%),
@@ -313,7 +315,6 @@ body.home #hero .eg-hero__stats {
 	align-items: center;
 	gap: 2rem;
 	padding-block-start: 1.5rem;
-	border-block-start: 1px solid rgba(16, 33, 54, 0.16);
 	inline-size: 100%;
 	margin: 0;
 }
@@ -587,6 +588,9 @@ body.home #deals {
 	--eg-deals-color: #ffffff;
 	--eg-deals-accent: #9f3ebd;
 	--eg-deals-glow: radial-gradient(circle, rgba(159, 62, 189, 0.25) 0%, rgba(102, 41, 121, 0) 70%);
+	--eg-deals-radius-md: 14px;
+	--eg-deals-radius-lg: 20px;
+	--eg-deals-radius-pill: 9999px;
 
 	--eg-deals-eyebrow-bg: rgba(255, 255, 255, 0.15);
 	--eg-deals-eyebrow-border: rgba(255, 255, 255, 0.25);
@@ -596,20 +600,22 @@ body.home #deals {
 	--eg-deals-subtitle-color: #cbd5e1;
 
 	--eg-deals-timer-bg: rgba(255, 255, 255, 0.1);
-	--eg-deals-timer-border: rgba(255, 255, 255, 0.15);
+	--eg-deals-timer-border: rgba(255, 255, 255, 0.2);
 	--eg-deals-timer-color: #ffffff;
 	--eg-deals-timer-label: #cbd5e1;
-	--eg-deals-timer-colon: #ffffff;
+	--eg-deals-timer-colon: #9f3ebd;
 
 	--eg-deals-action-bg: #9f3ebd;
 	--eg-deals-action-color: #ffffff;
-	--eg-deals-action-shadow: 0 4px 16px rgba(159, 62, 189, 0.35);
+	--eg-deals-action-shadow: 0 4px 16px rgba(159, 62, 189, 0.32);
 
 	--eg-deals-card-bg: rgba(255, 255, 255, 0.08);
 	--eg-deals-card-border: rgba(255, 255, 255, 0.14);
 	--eg-deals-card-hover-bg: rgba(255, 255, 255, 0.12);
 	--eg-deals-card-hover-border: rgba(255, 255, 255, 0.25);
 	--eg-deals-card-color: #ffffff;
+	--eg-deals-media-bg: rgba(0, 0, 0, 0.05);
+	--eg-deals-title-underline: rgba(255, 255, 255, 0.4);
 
 	--eg-deals-badge-bg: #9f3ebd;
 	--eg-deals-badge-color: #ffffff;
