@@ -102,7 +102,7 @@ return [
 			'action_label'  => 'تسوقي العروض المتاحة الآن',
 			'action_url'    => $categoryUrl('offers'),
 			'layout'        => 'deals',
-			'countdown_end' => '2026-10-15T23:59:59',
+			'countdown_end' => '2026-11-30T23:59:59',
 			'show_rating'   => true,
 			'source'        => ['type' => 'on-sale', 'limit' => 2],
 		],
