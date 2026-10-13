@@ -2,8 +2,8 @@
 
 This theme holds only what is specific to Naya (naya.dokanelbanat.com).
 Everything else comes from the Egstore theme and the egstore-commerce plugin,
-which update without touching this folder. Built for Egstore theme 1.3.4 and
-egstore-commerce 1.3.3.
+which update without touching this folder. Built for Egstore theme 1.3.6 and
+egstore-commerce 1.3.4.
 
 It shows as "Misr Child" in the dashboard; its folder and update slug are
 `misr-child-naya`, separate from عطور.ستور's `misr-child`, so each store gets
