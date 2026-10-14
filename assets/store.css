@@ -512,15 +512,8 @@ body.home #categories .eg-category-showcase__track {
 	}
 }
 
-@media (max-width: 39.99rem) {
-	body.home #categories .eg-category-showcase__track {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 0.75rem;
-	}
-}
-
 body.home #categories .eg-category-showcase__card {
-	padding: 24px 16px;
+	padding: 20px 12px;
 	background-color: #ffffff;
 	border: 1px solid rgba(16, 33, 54, 0.08);
 	border-radius: 20px;
@@ -578,6 +571,39 @@ body.home #categories .eg-category-showcase__text {
 	font-size: 12.5px; /* 0.78rem */
 	color: #4d5d6d;
 	line-height: 1.4;
+}
+
+/* Phones: the six categories stay three across (two rows) with smaller
+   cards, so the section fits in about one screen. */
+@media (max-width: 39.99rem) {
+	body.home #categories {
+		padding: 56px 0 40px;
+	}
+
+	body.home #categories .eg-category-showcase__track {
+		gap: 0.5rem;
+	}
+
+	body.home #categories .eg-category-showcase__card {
+		padding: 14px 6px;
+		border-radius: 16px;
+	}
+
+	body.home #categories .eg-category-showcase__media {
+		inline-size: 64px;
+		block-size: 64px;
+		min-inline-size: 64px;
+		margin-block-end: 0.625rem;
+	}
+
+	body.home #categories .eg-category-showcase__name {
+		font-size: 13px;
+		margin-block-end: 0.2rem;
+	}
+
+	body.home #categories .eg-category-showcase__text {
+		font-size: 11.5px;
+	}
 }
 
 /* ==========================================================================

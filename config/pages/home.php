@@ -7,8 +7,11 @@
  * (from the design in Egstore-theme/demo-home). Category cards use each
  * category's own thumbnail and link.
  *
- * The hero's figures and badges are the design's claims; the store confirms
- * them before going live (README.md). Sections of the design the theme cannot
+ * Copy follows what Naya sells (Moroccan and Sudanese care rituals, scrubs,
+ * butters, bridal and pedicure boxes) and only promises what the store
+ * confirmed: delivery in 5-7 working days, free shipping over 1000 ج.م, cash
+ * on delivery, wallets, InstaPay and help on WhatsApp. The hero figures are
+ * the store's. Sections of the design the theme cannot
  * render yet (flash deals countdown, routine finder, shop by concern, bundle
  * builder, clinical proof, ingredients, reviews, UGC, blog, FAQ, newsletter)
  * are added as the theme gains them.
@@ -32,28 +35,28 @@ return [
 		'section' => 'hero',
 		'config'  => [
 			'layout'                 => 'split',
-			'eyebrow'                => 'تركيبات سريرية طبيعية 100% لخلايا تتنفس',
+			'eyebrow'                => 'وصفات طبيعية من طقوس الجمال المغربي والسوداني',
 			'eyebrow_style'          => 'pill',
 			'eyebrow_icon'           => 'leaf',
-			'title'                  => 'علم الطبيعة لجمال يدوم: روتينك الشامل',
-			'title_highlight'        => 'للبشرة، الشعر والجسم',
-			'description'            => 'نجمع بين أنقى الخلاصات النباتية العضوية وأحدث ابتكارات طب الجلدية السريرية. خالٍ تماماً من البارابين، العطور الاصطناعية، والسيليكون لتمنحي نفسك عناية نقية تستحقينها في مصر من نايا.',
+			'title'                  => 'طقوس جمال طبيعية لروتينك الكامل',
+			'title_highlight'        => 'للبشرة والشعر والجسم',
+			'description'            => 'صابون مغربي، ودلكة سودانية، ومخمريات، وسكرابات وزبدات مخفوقة، مختارة بعناية عشان تمنحك نعومة ودلال في بيتك. اطلبي من أي محافظة في مصر وادفعي عند الاستلام.',
 			'mobile_align'           => 'center',
 			// Shipped with the theme (assets/images/hero.webp, 960×1200, the
 			// design's photo), so it is the same locally and on the store.
 			'image'                  => get_stylesheet_directory_uri() . '/assets/images/hero.webp',
-			'action_label'           => 'تسوقي كافة الأقسام',
+			'action_label'           => 'تسوقي كل المنتجات',
 			'action_url'             => $shopUrl,
 			'secondary_action_label' => 'العروض',
 			'secondary_action_url'   => $categoryUrl('offers'),
 			'stats'                  => [
 				['value' => '98%', 'label' => 'مكونات طبيعية ونقية'],
 				['value' => '+65,000', 'label' => 'عميلة راضية في محافظات مصر'],
-				['value' => '4.9 / 5', 'label' => 'تقييم موثق من أطباء الجلد'],
+				['value' => '4.9 / 5', 'label' => 'متوسط تقييم عميلاتنا'],
 			],
 			'badges'                 => [
-				['icon' => 'zap', 'title' => 'نضارة زجاجية 72 ساعة', 'text' => 'حمض الهيالورونيك الثلاثي + النياسيناميد'],
-				['icon' => 'shield-check', 'title' => 'معتمد سريرياً بمصر', 'text' => 'مختبر تحت إشراف أطباء الجلدية'],
+				['icon' => 'heart', 'title' => 'تجهيزات العروسة', 'text' => 'بوكس العروسة وبوكسات الباديكير والهنا'],
+				['icon' => 'truck', 'title' => 'شحن مجاني فوق 1000 ج.م', 'text' => 'توصيل لكل المحافظات خلال 5 إلى 7 أيام عمل'],
 			],
 		],
 	],
@@ -63,10 +66,10 @@ return [
 			'id'     => 'pillars',
 			'layout' => 'inline',
 			'items'  => [
-				['icon' => 'truck', 'title' => 'شحن سريع ومبرد', 'text' => 'القاهرة والجيزة والإسكندرية خلال 24-48 ساعة، وخلال 3 أيام لباقي المحافظات في عبوات عازلة للحرارة.'],
-				['icon' => 'shield-check', 'title' => 'ضمان الرضا الذهبي 30 يوماً', 'text' => 'استرجاع أو استبدال فوري إن لم تلحظي نتيجة إيجابية في بشرتك أو شعرك.'],
-				['icon' => 'message-circle', 'title' => 'استشارة جلدية مجانية', 'text' => 'تحدثي مباشرة عبر واتساب مع طبيبة جلدية معتمدة لبناء روتينك الأمثل وتحديد احتياجاتك.'],
-				['icon' => 'banknote', 'title' => 'طرق دفع مصرية متنوعة', 'text' => 'فودافون كاش، إنستاباي، فوري، كروت ميزة، تقسيط ڤاليو بدون فوائد، أو الدفع نقداً عند الاستلام.'],
+				['icon' => 'truck', 'title' => 'شحن لكل المحافظات', 'text' => 'التوصيل خلال 5 إلى 7 أيام عمل، والشحن مجاني للطلبات فوق 1000 ج.م.'],
+				['icon' => 'banknote', 'title' => 'ادفعي بالطريقة اللي تريحك', 'text' => 'الدفع عند الاستلام، أو بالمحفظة الإلكترونية، أو إنستاباي.'],
+				['icon' => 'message-circle', 'title' => 'نساعدك تختاري على واتساب', 'text' => 'اسألينا عن أي منتج، وفريقنا يساعدك تختاري اللي يناسبك.'],
+				['icon' => 'leaf', 'title' => 'مكونات طبيعية', 'text' => 'وصفات تقليدية بالطمي المغربي والعكر الفاسي والنيلة الزرقاء والزيوت الطبيعية.'],
 			],
 		],
 	],
@@ -76,8 +79,8 @@ return [
 			'id'            => 'categories',
 			'eyebrow'       => 'أقسام المتجر',
 			'heading_align' => 'center',
-			'title'         => 'استكشفي حسب عالم العناية',
-			'description'   => 'تشكيلة شاملة مدروسة بعناية لتلبي جميع احتياجات روتينك اليومي من الرأس حتى أطراف القدمين.',
+			'title'         => 'اختاري من أقسام نايا',
+			'description'   => 'منتجات عناية للبشرة والشعر والجسم، وبوكسات جاهزة لكل مناسبة.',
 			'layout'        => 'grid',
 			'card_style'    => 'circle',
 			'show_count'    => true,
@@ -95,11 +98,11 @@ return [
 		'section' => 'product-collection',
 		'config'  => [
 			'id'            => 'deals',
-			'eyebrow'       => 'عروض محدودة الكمية',
+			'eyebrow'       => 'عروض نايا',
 			'heading_align' => 'center',
-			'title'         => 'تخفيضات الدفعة الحصرية: خصومات تصل إلى 40%',
-			'description'   => 'دفعات طازجة تم إنتاجها حديثاً لضمان أقصى نشاط حيوي للمكونات. ينتهي العرض عند نفاد الكمية المخصصة لهذا الأسبوع في مصر من نايا.',
-			'action_label'  => 'تسوقي العروض المتاحة الآن',
+			'title'         => 'خصومات على منتجات مختارة',
+			'description'   => 'أسعار مخفضة على منتجات من كل الأقسام، ونسبة الخصم مكتوبة على كل منتج.',
+			'action_label'  => 'تسوقي كل العروض',
 			'action_url'    => $categoryUrl('offers'),
 			'layout'        => 'deals',
 			'countdown_end' => '2026-11-30T23:59:59',
@@ -111,10 +114,10 @@ return [
 		'section' => 'product-collection',
 		'config'  => [
 			'id'            => 'new-arrivals',
-			'eyebrow'       => 'وصل حديثاً بالمخازن',
+			'eyebrow'       => 'وصل حديثاً',
 			'heading_align' => 'center',
-			'title'         => 'أحدث ابتكارات العناية والجمال في السوق المصري من نايا',
-			'description'   => 'تركيبات سريرية مطورة حديثاً تمتاز بأعلى تركيزات الفعالية لتمنحك نتائج ملموسة من أول أسبوعين.',
+			'title'         => 'أحدث منتجات نايا',
+			'description'   => 'آخر المنتجات اللي وصلت المتجر.',
 			'layout'        => 'carousel',
 			'show_rating'   => true,
 			'source'        => ['type' => 'latest', 'limit' => 8],
@@ -124,10 +127,10 @@ return [
 		'section' => 'product-collection',
 		'config'  => [
 			'id'            => 'skincare',
-			'eyebrow'       => 'عناية الوجه والرقبة',
+			'eyebrow'       => 'العناية بالوجه',
 			'heading_align' => 'center',
-			'title'         => 'عالم العناية بالبشرة السريرية المركزة من نايا',
-			'description'   => 'مستحضرات صيدلانية عالية النقاء تحل مشاكل البهتان، التصبغات، الخطوط التعبيرية والحاجز المتضرر بأعلى أمان.',
+			'title'         => 'نعومة ونضارة لبشرتك وشفايفك',
+			'description'   => 'من الطمي المغربي والحنة البيضاء وجل الورد، لحد الليب أويل وسيرم الرموش والحواجب.',
 			'action_label'  => 'عرض الكل',
 			'action_url'    => $categoryUrl('العناية-بالوجه'),
 			'layout'        => 'grid',
@@ -139,10 +142,10 @@ return [
 		'section' => 'product-collection',
 		'config'  => [
 			'id'            => 'bodycare',
-			'eyebrow'       => 'طقوس السبا الفاخرة',
+			'eyebrow'       => 'طقوس الحمام المغربي',
 			'heading_align' => 'center',
-			'title'         => 'طقوس العناية والترطيب العميق للجسم 48 ساعة',
-			'description'   => 'صقل الجلد، تفتيح المناطق الجافة، والتخلص من مظهر جلد الوزة بتركيبات غنية بزبدة الشيا والقهوة وأحماض الألفا هيدروكسي.',
+			'title'         => 'عناية الجسم: تقشير وترطيب ونعومة',
+			'description'   => 'صابون مغربي وليفة للتقشير، ودلكة سودانية وسكرابات، وبعدها زبدات ومخمريات وزيوت تسيب بشرتك ناعمة ومعطرة.',
 			'action_label'  => 'عرض الكل',
 			'action_url'    => $categoryUrl('العناية-بالجسم'),
 			'layout'        => 'grid',
@@ -154,10 +157,10 @@ return [
 		'section' => 'product-collection',
 		'config'  => [
 			'id'            => 'bundles',
-			'eyebrow'       => 'بكجات التوفير',
+			'eyebrow'       => 'مجموعات العناية',
 			'heading_align' => 'center',
-			'title'         => 'بكجات نايا المتكاملة (وفري حتى 35%)',
-			'description'   => 'روتينات مصممة لتعمل بتناغم تام، مضاعفة النتائج وموفرة لوقتك ولميزانيتك.',
+			'title'         => 'بوكسات نايا الجاهزة',
+			'description'   => 'روتين كامل في بوكس واحد، ليكي أو كهدية: بوكس العروسة، والباديكير، والهنا، وغيرهم.',
 			'action_label'  => 'عرض الكل',
 			'action_url'    => $categoryUrl('kits'),
 			'show_rating'   => true,
@@ -168,10 +171,10 @@ return [
 		'section' => 'product-collection',
 		'config'  => [
 			'id'            => 'bestsellers',
-			'eyebrow'       => 'الأعلى تقييماً وطلباً',
+			'eyebrow'       => 'الأكثر طلباً',
 			'heading_align' => 'center',
-			'title'         => 'مختارات نايا الأكثر مبيعاً',
-			'description'   => 'المنتجات اللي غيرت روتين آلاف العميلات وحصلت على أعلى التقييمات.',
+			'title'         => 'الأكثر مبيعاً في نايا',
+			'description'   => 'المنتجات اللي عميلاتنا بيرجعوا يطلبوها كل مرة.',
 			'layout'        => 'carousel',
 			'show_rating'   => true,
 			'source'        => ['type' => 'best-selling', 'limit' => 8],

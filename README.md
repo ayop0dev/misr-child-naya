@@ -31,13 +31,14 @@ only its own updates.
 
 ## To confirm before production
 
-The design promises things only the store can confirm. Until then:
+The homepage promises only what the store confirmed (2026-10-14): delivery in
+5-7 working days, free shipping over 1000 ج.م, cash on delivery, wallets,
+InstaPay, and help on WhatsApp. Discounts differ per product, so no heading
+names a percentage. The return policy (unopened products within 15 days) is
+not written on the homepage, by the store's choice.
 
-- The announcement bar is **off**; its texts are the design's (free shipping
-  over 600 ج.م, 20% off with `NAYA20`, 30-day returns, 24-48h delivery).
-- The features band (cold shipping times, 30-day guarantee, WhatsApp
-  consultation, payment methods) and the deals/bundles headings ("حتى 40%",
-  "وفري حتى 35%") are the design's copy.
+- The announcement bar is **off** until the store turns it on (free shipping
+  over 1000 ج.م, `NAYA20`, delivery in 5-7 working days).
 
 ## Homepage: design sections and their state
 

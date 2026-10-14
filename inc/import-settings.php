@@ -29,13 +29,13 @@ function misr_child_naya_store_defaults(): array
 		'egstore_header_show_menu'       => true,
 		'egstore_header_show_drawer'     => true,
 		'egstore_header_show_account'    => true,
-		// The design's offers; the bar stays off until the store confirms
-		// them (free shipping threshold, the NAYA20 code, the guarantee).
+		// The store's offers (confirmed 2026-10-14); the bar stays off until
+		// the store turns it on.
 		'egstore_announcement_enabled'   => false,
 		'egstore_announcement_placement' => 'all',
-		'egstore_announcement_1'         => 'شحن مجاني وسريع لكل محافظات مصر للطلبات فوق 600 ج.م',
+		'egstore_announcement_1'         => 'شحن مجاني للطلبات فوق 1000 ج.م',
 		'egstore_announcement_2'         => 'خصم 20% على أول طلب بكود NAYA20',
-		'egstore_announcement_3'         => 'ضمان استرجاع 30 يوما وتوصيل خلال 24-48 ساعة',
+		'egstore_announcement_3'         => 'توصيل لكل المحافظات خلال 5 إلى 7 أيام عمل',
 		'egstore_announcement_4'         => '',
 		// Naya's palette.
 		'egstore_color_primary'          => '#662979',
