@@ -1,5 +1,10 @@
 # Misr Child (Naya) Changelog
 
+## 1.0.2
+
+- Blog posts use Naya purple for the category, links, the rule beside
+  headings and list markers (theme 1.3.7's article page).
+
 ## 1.0.1
 
 - Homepage copy for what Naya sells (Moroccan and Sudanese care rituals,
