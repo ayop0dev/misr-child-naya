@@ -1,5 +1,15 @@
 # Misr Child (Naya) Changelog
 
+## 1.0.1
+
+- Homepage copy for what Naya sells (Moroccan and Sudanese care rituals,
+  scrubs, butters, bridal and pedicure boxes), with only the store's
+  confirmed promises: delivery in 5-7 working days, free shipping over
+  1000 ج.م, cash on delivery, wallets, InstaPay and help on WhatsApp.
+- Announcement defaults updated the same way (the bar stays off).
+- Categories: six in one row on desktops, three across in two rows on
+  phones with smaller cards.
+
 ## 1.0.0
 
 - First release. Needs Egstore theme 1.3.6 and egstore-commerce 1.3.4.
