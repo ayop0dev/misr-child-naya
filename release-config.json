@@ -37,9 +37,9 @@
     "public_key": "EUWO0Zmds383kWTAQCZr56Wm1zAG/3LMj+LTPdxvfY8="
   },
   "rollback": {
-    "strategy": "first-release-baseline",
+    "strategy": "previous-approved-release",
     "baseline_version": "1.0.0",
-    "previous_version": null,
-    "artifact_sha256": null
+    "previous_version": "1.0.0",
+    "artifact_sha256": "ab03944373eb7cec0d495d59fb90f3faf6c525650468b6487f6073b0b4c68343"
   }
 }
