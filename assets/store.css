@@ -783,3 +783,9 @@ body.home .eg-product-card--h3 .eg-product-card__discount {
 body.home .eg-product-collection__action {
 	border-radius: 9999px;
 }
+
+/* Blog posts: Naya purple for the category badge, links, h2 rule and list markers.
+   `body` outranks the theme's `.eg-single-post` defaults whatever the load order. */
+body .eg-single-post {
+	--eg-post-accent: #662979;
+}
